@@ -1,9 +1,12 @@
 <?php
-	$mysqli = new mysqli("localhost", "root", "", "classroom");
-	if ($mysqli->connect_errno) {
-		echo "Echec lors de la connexion à MySQL : (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+	try {
+		$dbh = new PDO('mysql:host=localhost;dbname=classroom', 'root', '');
+	} catch (PDOException $e) {
+		print "Erreur !: " . $e->getMessage() . "<br/>";
+		die();
 	}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,12 +33,8 @@
 		<div class="row">
 			<div class="col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4 col-xs-4 col-sm-4 col-md-4 col-lg-4"><h1 style="text-align:center;">Fil d'actualité</h1></div>
 		</div>
-		<?php
-		$res = $mysqli->query("SELECT * FROM wall w left outer join user u ON u.id_user = w.author_wall ORDER BY date_wall");
-		$res->data_seek(0);
-	
-		while ($row = $res->fetch_assoc())
-		{
+		<?php		
+		foreach($dbh->query('SELECT * FROM wall w left outer join user u ON u.id_user = w.author_wall ORDER BY date_wall') as $row) {
 		?>
 			<div class="row">
 				<div class=""></div>
@@ -45,12 +44,16 @@
 			</div>
 		<?php
 		}
+		$dbh = null;
 		?>
 		
-		<div class="row">
+		<div class="row" style="text-align:center;">
 			<div class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-6 col-sm-6 col-md-6 col-lg-6">
 			<textarea rows="4" cols="50" placeholder="Décrit au monde à quel point tu es con.."></textarea> 
 			</div>
+		</div>
+		<div class="row" style="text-align:right;">
+			<div class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-6 col-sm-6 col-md-6 col-lg-6"><input class="btn btn-primary" type="submit" value="Submit"></div>
 		</div>
 
 	</div>
