@@ -39,7 +39,13 @@
 			<div class="row">
 				<div class=""></div>
 				<div class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-offset-6 col-sm-offset-6 col-md-offset-6 col-lg-offset-6">
-					<p><?php echo $row['alias_user'] . " :\n". $row['content_wall'] . "\n"; ?></p>
+					<p><?php					
+					if (preg_match('/^.*\.(jpg|jpeg|png|gif)$/i', $row['content_wall'])) {
+						$row['content_wall'] = "<img src=" .$row['content_wall'] . ">";
+					}
+						
+						echo $row['alias_user'] . " a publié le " . $row['date_wall'] . " :<br>". $row['content_wall']
+					?></p> 
 				</div>
 			</div>
 		<?php
