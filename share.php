@@ -33,5 +33,7 @@
     {
         echo 'Echec de l\'upload !';
     }
+    include('listUpload.php');
+    listUpload();
 }
 ?>
