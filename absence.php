@@ -43,7 +43,6 @@ session_start();
             </tr>
            <?php
         }
-
     ?>
     </tbody>
     </table>
