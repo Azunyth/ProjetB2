@@ -26,22 +26,18 @@
 
             $stmt->execute();
 
-            ?>
-            <script> alert("mot de passe changé");
-                window.location="manageProfil.php";
-            </script>
-            <?php
+            header('Location: profil.php');
         }else{
             ?>
             <script> alert("les nouvaux mots de passe ne corresponde pas");
-                window.location="manageProfil.php";
+                window.location="changeMdp.php";
             </script>
             <?php
         }
     }else{
         ?>
         <script> alert("mot de passe incorecte");
-            window.location="manageProfil.php";
+            window.location="changeMdp.php";
         </script>
         <?php
     }

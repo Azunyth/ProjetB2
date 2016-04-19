@@ -8,4 +8,5 @@ session_destroy();
 // Suppression des cookies de connexion automatique
 setcookie('alias', '');
 setcookie('password', '');
+header('Location: connexion.php');
 ?>

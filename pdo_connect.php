@@ -33,5 +33,5 @@ if (!empty($_POST)) {
     } else {
         echo "<span class='error'>Please, fill in all the credentials</span>";
     }
-}
+} 
 ?>

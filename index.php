@@ -57,18 +57,17 @@ session_start();
 			<div class="col-md-2 menu_left">
 					<div id="menu">
 					
-					<li><a href="#" class="clickLien profil">Profil</a>
+					<li><a href="profil.php">Profil</a>
 						<ul>
-						  <li><a href="#">Sous-item 1</a></li>
-						  <li><a href="#">Sous-item 2</a></li>
-						  <li><a href="#">Sous-item 3</a></li>
+						  <li><a href="profil.php">Gestion de compte</a></li>
+						  <li><a href="unconnect.php">Deconnexion</a></li>
 						</ul>
 					</li>
 					
 					</div>
 				
-				<a class="clickLien clickShare" href="#share">Upload</a>
-				<a class="clickLien clickAbsent" href="#page1.php">Absences</a>
+				<a class="clickLien" href="ShareUp.php">Upload</a>
+				<a class="clickLien" href="absence.php">Absences</a>
 				<a class="clickLien" href="page1.php">Page 1 </a>
 				<a class="clickLien" href="page1.php">Page 1 </a>
 			</div>

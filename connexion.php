@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="connect.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,17 +19,28 @@
     <![endif]-->
 </head>
 <body>
-<h1>Connect to your world</h1>
+<div id="container">
 
-<p>Hi, please log in into a beautiful area that will make you loose your mind.</p>
+<form name="login-form" class="login-form" action="pdo_connect.php" method="post">
+    
+        <div class="header">
+        <h1>Login </h1>
+        
+        </div>
+    
+        <div class="content">
+        <input name = "alias" type="text" class="input username" placeholder="Username" />
+        <div class="user-icon"></div>
+        <input name = "pass" type="password" class="input password" placeholder="Password" />
+        <div class="pass-icon"></div>       
+        </div>
 
-<form action = "pdo_connect.php" method = "post">
-    <input type = "text" name = "alias" placeholder="Login"/>
-    <input type = "password" name = "pass" placeholder="Password"/>
-    <input type = "submit" value = "Submit" />
-</form>
-
-
+        <div class="footer">
+        <input type="submit" name="submit" value="Login" class="button" />
+        <input type="submit" name="submit" value="Register" class="register" />
+        </div>
+    
+    </form>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
