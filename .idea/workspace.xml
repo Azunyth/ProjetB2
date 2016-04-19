@@ -25,21 +25,11 @@
       <file leaf-file-name="profil.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="15" column="5" selection-start-line="5" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
               <folding>
-                <marker date="1461053523997" expanded="true" signature="144:192" placeholder="select * fro... user" />
+                <marker date="1461056821310" expanded="true" signature="144:192" placeholder="select * fro... user" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changeMdp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/changeMdp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -47,23 +37,59 @@
       <file leaf-file-name="changeMdpAction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/changeMdpAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.769231">
-              <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            <state vertical-scroll-proportion="-15.038462">
+              <caret line="32" column="17" selection-start-line="20" selection-start-column="12" selection-end-line="32" selection-end-column="17" />
               <folding>
-                <marker date="1461056661519" expanded="true" signature="249:309" placeholder="select passw... user" />
-                <marker date="1461056661519" expanded="true" signature="596:662" placeholder="UPDATE user " />
+                <marker date="1461061569168" expanded="true" signature="249:309" placeholder="select passw... user" />
+                <marker date="1461061569168" expanded="true" signature="596:662" placeholder="UPDATE user " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="absence.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="absence.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/absence.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5275862">
-              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+            <state vertical-scroll-proportion="-1.9615384">
+              <caret line="3" column="31" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
               <folding>
-                <marker date="1461051436978" expanded="true" signature="593:690" placeholder="select user_... absences" />
+                <marker date="1461056821307" expanded="true" signature="593:690" placeholder="select user_... absences" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manageProfil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manageProfil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changeEmailAction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/changeEmailAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.384615">
+              <caret line="51" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="2" />
+              <folding>
+                <marker date="1461061856876" expanded="true" signature="236:263" placeholder="select email... user" />
+                <marker date="1461061856876" expanded="true" signature="585:649" placeholder="UPDATE user " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changePseudoAction.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/changePseudoAction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.46896553">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+              <folding>
+                <marker date="1461067055475" expanded="true" signature="240:267" placeholder="select alias... user" />
+                <marker date="1461067055475" expanded="true" signature="592:657" placeholder="UPDATE user " />
               </folding>
             </state>
           </provider>
@@ -77,10 +103,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/absence.php" />
         <option value="$PROJECT_DIR$/profil.php" />
+        <option value="$PROJECT_DIR$/absence.php" />
         <option value="$PROJECT_DIR$/changeMdp.php" />
         <option value="$PROJECT_DIR$/changeMdpAction.php" />
+        <option value="$PROJECT_DIR$/manageProfil.php" />
+        <option value="$PROJECT_DIR$/changeEmailAction.php" />
+        <option value="$PROJECT_DIR$/changePseudoAction.php" />
       </list>
     </option>
   </component>
@@ -255,39 +284,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/profil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="5" selection-start-line="5" selection-start-column="4" selection-end-line="15" selection-end-column="5" />
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding>
-            <marker date="1461053523997" expanded="true" signature="144:192" placeholder="select * fro... user" />
+            <marker date="1461056821310" expanded="true" signature="144:192" placeholder="select * fro... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changeEmailAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.384615">
+          <caret line="51" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="2" />
+          <folding>
+            <marker date="1461061856876" expanded="true" signature="236:263" placeholder="select email... user" />
+            <marker date="1461061856876" expanded="true" signature="585:649" placeholder="UPDATE user " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/changeMdpAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.769231">
-          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        <state vertical-scroll-proportion="-15.038462">
+          <caret line="32" column="17" selection-start-line="20" selection-start-column="12" selection-end-line="32" selection-end-column="17" />
           <folding>
-            <marker date="1461056661519" expanded="true" signature="249:309" placeholder="select passw... user" />
-            <marker date="1461056661519" expanded="true" signature="596:662" placeholder="UPDATE user " />
+            <marker date="1461061569168" expanded="true" signature="249:309" placeholder="select passw... user" />
+            <marker date="1461061569168" expanded="true" signature="596:662" placeholder="UPDATE user " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/changeMdp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/absence.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5275862">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="3" column="31" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="31" />
           <folding>
-            <marker date="1461051436978" expanded="true" signature="593:690" placeholder="select user_... absences" />
+            <marker date="1461056821307" expanded="true" signature="593:690" placeholder="select user_... absences" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manageProfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changePseudoAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46896553">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <marker date="1461067055475" expanded="true" signature="240:267" placeholder="select alias... user" />
+            <marker date="1461067055475" expanded="true" signature="592:657" placeholder="UPDATE user " />
           </folding>
         </state>
       </provider>
