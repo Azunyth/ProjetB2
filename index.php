@@ -83,8 +83,15 @@ session_start();
 			<div class="row">
 				<div class=""></div>
 				<div class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-offset-6 col-sm-offset-6 col-md-offset-6 col-lg-offset-6">
-					<p><?php					
-					if (preg_match('/^.*\.(jpg|jpeg|png|gif)$/i', $row['content_wall'])) {
+					<p><?php			
+
+					
+					
+					// if (preg_match('/^.*\.(jpg|jpeg|png|gif)$/i', $row['content_wall']))
+						
+					$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}((jpg|jpeg|png|gif)S*)?/";
+					
+					if (preg_match($reg_exUrl, $row['content_wall'])) {
 						$row['content_wall'] = "<img src=" .$row['content_wall'] . ">";
 					}
 						
