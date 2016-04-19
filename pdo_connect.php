@@ -1,5 +1,6 @@
 <?php
-$db = new PDO('mysql:host=localhost;dbname=classroom', 'root', 'root');
+session_start();
+$db = new PDO('mysql:host=localhost;dbname=classroom', 'root', '');
 
 if (!empty($_POST)) {
 
@@ -23,14 +24,10 @@ if (!empty($_POST)) {
             echo "<span class='error'>Bad password or alias, please check that and try again my lord.</span>";
         }
         else {
-            $_SESSION['id_user']	=	$donnees['id_user'];
-            $_SESSION['lastname']		=	$donnees['lastname'];
-            $_SESSION['firstname']		=	$donnees['firstname'];
-            $_SESSION['email']	=	$donnees['email'];
-            $_SESSION['alias'] 		= 	$donnees['alias'];
-            echo 'vous etes connecte';
+            $_SESSION['password']	=	$donnees['password_user'];
+            $_SESSION['alias'] 		= 	$donnees['alias_user'];
 
-            // Pour après : redir("index.php");
+           header('Location: index.php');
 
         }
     } else {

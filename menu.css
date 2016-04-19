@@ -75,3 +75,12 @@ div.menu_left{
 .navbar-default .navbar-nav>li>a {
     color: white;
 }
+#menu li ul {
+ display:none;
+}
+#menu li{
+	list-style: none;
+}
+#menu  li:hover ul {
+ display:block;
+ }

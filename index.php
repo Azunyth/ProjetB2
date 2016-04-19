@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 	try {
 		$dbh = new PDO('mysql:host=localhost;dbname=classroom', 'root', '');
 	} catch (PDOException $e) {
@@ -47,14 +49,26 @@
                                 <li><a href="#pricing">Team</a></li>
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
+                            
                         </div>
                     </nav>
             </div>
             <div class="row menu-left">
                 <div class="col-md-2 menu_left">
+                		<div id="menu">
+                		
+                		<li><a href="#" class="clickLien profil">Profil</a>
+						    <ul>
+						      <li><a href="#">Sous-item 1</a></li>
+						      <li><a href="#">Sous-item 2</a></li>
+						      <li><a href="#">Sous-item 3</a></li>
+						    </ul>
+						</li>
+						
+						</div>
+                	
                     <a class="clickLien clickShare" href="#share">Upload</a>
-                    <a class="clickLien" href="page1.php">Page 1 </a>
-                    <a class="clickLien" href="page1.php">Page 1 </a>
+                    <a class="clickLien clickAbsent" href="#page1.php">Absences</a>
                     <a class="clickLien" href="page1.php">Page 1 </a>
                     <a class="clickLien" href="page1.php">Page 1 </a>
                 </div>
@@ -86,7 +100,7 @@
 		<form action="action.php" method="post">
 			<div class="row" style="text-align:center;">
 				<div class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-lg-offset-3 col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				<textarea name="msg" "rows="4" cols="50" placeholder="Décrit au monde à quel point tu es con.."></textarea> 
+					<textarea name="msg" rows="4" cols="50" placeholder="Decrit au monde a quel point tu es con.."></textarea>
 				</div>
 			</div>
 			<div class="row" style="text-align:right;">
