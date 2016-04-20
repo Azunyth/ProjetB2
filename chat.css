@@ -22,7 +22,8 @@ a {
     padding-bottom:25px;
     background:#0B3861;
     width:504px;
-    border:1px solid #ACD8F0; }
+    border:1px solid #ACD8F0;
+    border-radius: 10px; }
   
 #loginform { padding-top:18px; }
   
@@ -38,11 +39,13 @@ a {
     width:430px;
     color: black;
     border:1px solid #ACD8F0;
-    overflow:auto; }
+    overflow:auto;
+    border-radius: 10px; }
   
 #usermsg {
     width:395px;
-    border:1px solid #ACD8F0; }
+    border:1px solid #ACD8F0;
+    border-radius: 10px; }
   
 #submit { width: 60px; }
   
