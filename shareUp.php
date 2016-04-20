@@ -1,3 +1,11 @@
+<?php 
+
+session_start();
+if(!isset($_SESSION['alias']) && !isset($_SESSION['pass'])){
+	header('Location: connexion.php');
+	alert('authentication failed !');
+}else {
+	?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,3 +72,6 @@
    	</div>
 </body>
 </html>
+<?php 
+}
+?>

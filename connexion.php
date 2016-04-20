@@ -37,7 +37,7 @@
 
         <div class="footer">
         <input type="submit" name="submit" value="Login" class="button" />
-        <input type="submit" name="submit" value="Register" class="register" />
+        <a type="submit" name="submit" value="Register" class="register" href="register.php">Register</a>
         </div>
     
     </form>

@@ -5,7 +5,8 @@ $db = new PDO('mysql:host=localhost;dbname=classroom', 'root', '');
 if (!empty($_POST)) {
 
     if (!empty($_POST['alias']) && (!empty($_POST['pass']))) {
-
+        var_dump($_POST['alias']);
+        var_dump($_POST['pass']);
         $alias = trim($_POST['alias']);
         $alias = htmlspecialchars($alias, ENT_QUOTES);
         $alias = stripslashes($alias);
@@ -15,9 +16,10 @@ if (!empty($_POST)) {
         $pass = stripslashes($pass);
 
         $results = $db->prepare('SELECT alias_user, password_user
-				   FROM user');
-        $results->execute(array('alias_user'=>$alias,'password_user'=>$pass));
+				   FROM user WHERE alias_user = "'.$alias.'" AND password_user = "'.$pass.'"');
+        $results->execute();
         $donnees = $results->fetch(PDO::FETCH_ASSOC);
+        var_dump($donnees);
 
 
         if ($donnees['password_user'] != $pass) {

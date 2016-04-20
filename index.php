@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+if(!isset($_SESSION['alias']) && !isset($_SESSION['pass'])){
+	header('Location: connexion.php');
+	alert('authentication failed !');
+}else {
 	try {
 		$dbh = new PDO('mysql:host=localhost;dbname=classroom', 'root', '');
 	} catch (PDOException $e) {
@@ -68,7 +71,7 @@ session_start();
 				
 				<a class="clickLien" href="ShareUp.php">Upload</a>
 				<a class="clickLien" href="absence.php">Absences</a>
-				<a class="clickLien" href="page1.php">Page 1 </a>
+				<a class="clickLien" href="chat.php">Chat</a>
 				<a class="clickLien" href="page1.php">Page 1 </a>
 			</div>
 			<div class="col-md-10" id="corps" style="overflow-y:scroll; overflow-x:hidden; height:100%">
@@ -122,3 +125,7 @@ session_start();
     <script src="js/share.js"></script>
   </body>
 </html>
+<?php 
+
+}
+?>

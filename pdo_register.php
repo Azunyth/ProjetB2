@@ -1,5 +1,5 @@
 <?php
-$db = new PDO('mysql:host=localhost;dbname=classroom', 'root', 'root');
+$db = new PDO('mysql:host=localhost;dbname=classroom', 'root', '');
 
 if (!empty($_POST)) {
 
