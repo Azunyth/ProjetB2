@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Registration Space</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercice_php_1</title>
+        <?php
+        session_start();
+        include("config.php");
+        include("user.php");
+        $db = connect();
+        ?>
+        <link rel="stylesheet" type="text/css" href="registration.css">
+    </head>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="registration.css">
+    <body>
+        <h1 class="register-title">Enregistrez-vous</h1>
+        <form class="register" method="post" action="register.php">
 
+            <label for="firstname">Prenom</label>
+            <input class="register-input" type="text" name="firstname"> <br>
+            ​
+            <label for="password">Password</label>
+            <input class="register-input" type="password" name="password"><br>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
- <h1 class="register-title">Enregistrez-vous</h1>
-<form class="register" action = "pdo_register.php" method = "post">
-    <input class="register-input" type = "text" name = "firstname" placeholder="Firstname"/> <br>
-    <input class="register-input" type = "text" name = "lastname" placeholder="Lastname"/> <br>
-    <input class="register-input" type = "email" name = "email" placeholder="Email"/> <br>
-    <input class="register-input" type = "date" name = "DOB" placeholder="Date of Birth : YYYY-MM-DD "/> <br>
-    <input class="register-input" type = "text" name = "alias" placeholder="Login"/> <br>
-    <input class="register-input" type = "password" name = "pass" placeholder="Password"/> <br>
-    <input class="register-button" type = "submit" value = "Create Account" />
-</form>
+            <label for="lastname">Nom</label>
+            <input class="register-input" type="text" name="lastname"> <br>
+            ​
+            <label for="alias">Alias</label>
+            <input class="register-input" type="text" name="alias"> <br>
 
+            <label for="email">Email</label>
+            <input class="register-input" type="text" name="email"> <br>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</body>
+            <label for="birthday">Birthday</label>
+            <input class="register-input" type="date" name="birthday" placeholder="Date of Birth : YYYY-MM-DD "> <br>
+            ​
+            <input class="register-button" type="submit"/>
+            ​
+        </form>
+
+        <?php
+
+        if(isset($_POST['lastname']) && isset($_POST['firstname']) 
+            && isset($_POST['alias']) && isset($_POST['password']) 
+            && isset($_POST['email']) && isset($_POST['birthday']))
+        {
+        $alias = trim($_POST['alias']);
+        $alias = htmlspecialchars($alias, ENT_QUOTES);
+        $alias = stripslashes($alias);
+
+        $pass = trim($_POST['password']);
+        $pass = htmlspecialchars($pass, ENT_QUOTES);
+        $pass = stripslashes($pass);
+
+        $firstname = trim($_POST['firstname']);
+        $firstname = htmlspecialchars($firstname, ENT_QUOTES);
+        $firstname = stripslashes($firstname);
+
+        $lastname = trim($_POST['lastname']);
+        $lastname = htmlspecialchars($lastname, ENT_QUOTES);
+        $lastname = stripslashes($lastname);
+
+        $email = trim($_POST['email']);
+        $email = htmlspecialchars($email, ENT_QUOTES);
+        $email = stripslashes($email);
+
+        $birthday = trim($_POST['birthday']);
+        $birthday = htmlspecialchars($birthday, ENT_QUOTES);
+        $birthday = stripslashes($birthday);
+            if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
+            {
+                header("url=register.php");
+                ?>
+                <script type="text/javascript">
+                    alert('bad email');
+                </script>
+                <?php
+            }else
+            {
+
+                if(preg_match("/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/",$birthday))
+                {
+                    $user = new User($alias, $pass, $firstname,$lastname,$email,$birthday);
+                    $user->createUser();
+                }else
+                {
+                    echo "bad birthday";
+                }
+            }
+        }
+       
+        ?>
+    </body>
 </html>
